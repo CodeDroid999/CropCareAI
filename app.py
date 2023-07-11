@@ -5,6 +5,9 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from werkzeug.utils import secure_filename
 
+from flask import (Flask, redirect, render_template, request,
+                   send_from_directory, url_for)
+
 app = Flask(__name__)
 
 # Load the model
@@ -32,8 +35,6 @@ def predict():
     file_path = os.path.join(basepath, './uploads', secure_filename(image_file.filename))
     image_file.save(file_path)
     
-    
-
     # Make prediction
     result = model_predict(file_path, model)
 
@@ -46,5 +47,6 @@ def predict():
     # Return the prediction result
     return output
 
+
 if __name__ == '__main__':
-    app.run(debug=False, port=5926)
+   app.run()
