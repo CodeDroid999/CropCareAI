@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Plant Disease Detection</h2>
+
+<div>
+  <div class="containers">
+    <div class="card p-3">
+      <p>
+        Welcome to our plant disease detection solutions! Our advanced system
+        utilizes cutting-edge technology to identify and diagnose diseases in
+        plants. With our image recognition technology and machine learning
+        algorithms, we provide fast and accurate diagnoses, helping you maintain
+        healthy plants and prevent further damage."
+      </p>
+    </div>
+  </div>
+  <form id="upload-file" method="post" enctype="multipart/form-data">
+    <label for="imageUpload" class="upload-label mt-3"> Upload... </label>
+    <input
+      type="file"
+      name="file"
+      id="imageUpload"
+      accept=".png, .jpg, .jpeg"
+    />
+  </form>
+
+  <div class="image-section" style="display: none">
+    <div class="img-preview">
+      <div id="imagePreview"></div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary btn-lg mt-3" id="btn-predict">
+        Detect
+      </button>
+    </div>
+  </div>
+
+  <div class="loader" style="display: none"></div>
+
+  <h3 id="result">
+    <span> </span>
+  </h3>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Display selected image preview
+    $("#imageUpload").change(function() {
+      var input = this;
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          $("#imagePreview").css(
+            "background-image",
+            "url(" + e.target.result + ")"
+          );
+        };
+        reader.readAsDataURL(input.files[0]);
+        $(".image-section").show();
+      }
+    });
+
+    // Perform prediction on button click
+    $("#btn-predict").click(function() {
+      var form_data = new FormData($("#upload-file")[0]);
+      $(".loader").show();
+      $.ajax({
+        type: "POST",
+        url: "/predict",
+        data: form_data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(result) {
+          $(".loader").hide();
+          $("#result span").text("Result: " + result);
+        },
+        error: function() {
+          $(".loader").hide();
+          alert("Error occurred during prediction.");
+        },
+      });
+    });
+  });
+</script>
+
+{% endblock %}
