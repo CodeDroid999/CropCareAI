@@ -65,5 +65,8 @@ That's it! You have now successfully installed and set up the Cropcare-AI applic
 
 You may encounter the following errors:
 Click link to see how to solve them
+
+
+
 “An attempt was made to access a socket in a way forbidden by its access permissions/ Permission denied: Unable to establish a connection to the socket/ Socket operation on non-socket: Access denied"
 File not found errors/ Module not found
