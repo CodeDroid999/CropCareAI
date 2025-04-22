@@ -1,0 +1,15 @@
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/METADATA,sha256=jGHgnLd-0wgGAAjZFGL3Kn41M5L_9HLRkY8_TR19huQ,14811
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/RECORD,,
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/WHEEL,sha256=wklNeoByNLhdCl-oEQTdaHIeDl4q9zaQVqAlPxUEgLU,102
+tensorflow_io_gcs_filesystem-0.31.0.dist-info/top_level.txt,sha256=_D7B2mO0SFfak31jmeq5hQuWnU0EKPfSjC_DmAWGnMw,29
+tensorflow_io_gcs_filesystem/__init__.py,sha256=_JLsmDDxdx3Yx9Al-358IrvCtUjRxAZkLalWjXKmH_w,809
+tensorflow_io_gcs_filesystem/__pycache__/__init__.cpython-311.pyc,,
+tensorflow_io_gcs_filesystem/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorflow_io_gcs_filesystem/core/__pycache__/__init__.cpython-311.pyc,,
+tensorflow_io_gcs_filesystem/core/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorflow_io_gcs_filesystem/core/python/__pycache__/__init__.cpython-311.pyc,,
+tensorflow_io_gcs_filesystem/core/python/ops/__init__.py,sha256=F8rq-NhA15MgXmBqJGSl1n6LmicT5Zw7oL5dXmgagJc,2573
+tensorflow_io_gcs_filesystem/core/python/ops/__pycache__/__init__.cpython-311.pyc,,
+tensorflow_io_gcs_filesystem/core/python/ops/libtensorflow_io_gcs_filesystem.so,sha256=sZ305cblrcKkuj2LAR-ecSYoG5t7pLVGgqdoy44XwvA,5084672
